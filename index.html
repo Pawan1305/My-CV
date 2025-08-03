@@ -1,438 +1,477 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Resume</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <style>
-    /* styles.css */
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f9;
-    }
 
-    .resume-container {
-      width: 80%;
-      max-width: 900px;
-      margin: 20px auto;
-      background: #fff;
-      padding: 20px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-      border-radius: 5px;
-    }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<style>
+  /* styles.css */
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+  }
 
-    .header {
-      text-align: center;
-      margin-bottom: 20px;
-    }
+  .resume-container {
+    width: 80%;
+    max-width: 900px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+  }
 
-    .header h1 {
-      margin: 0;
-      font-size: 24px;
-      color: #333;
-    }
+  .header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
 
-    .header p {
-      margin: 5px 0;
-      color: #666;
-      font-size: 14px;
-    }
+  .header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+  }
 
-    .header .links a {
-      color: #0066cc;
-      text-decoration: none;
-      margin: 0 5px;
-      font-size: 14px;
-    }
+  .header p {
+    margin: 5px 0;
+    color: #666;
+    font-size: 14px;
+  }
 
-    .header .links a:hover {
-      text-decoration: underline;
-    }
+  .header .links a {
+    color: #0066cc;
+    text-decoration: none;
+    margin: 0 5px;
+    font-size: 14px;
+  }
 
-    section {
-      margin-bottom: 20px;
-    }
+  .header .links a:hover {
+    text-decoration: underline;
+  }
 
-    section h2 {
-      border-bottom: 2px solid #0066cc;
-      padding-bottom: 5px;
-      margin-bottom: 10px;
-      color: #333;
-    }
+  section {
+    margin-bottom: 20px;
+  }
 
-    .job,
-    .project,
-    .education-item,
-    .course-item {
-      margin-bottom: 15px;
-    }
+  section h2 {
+    border-bottom: 2px solid #0066cc;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    color: #333;
+  }
 
-    .job h3,
-    .project h3 {
-      margin: 0;
-      font-size: 18px;
-      color: #0066cc;
-    }
+  .job,
+  .project,
+  .education-item,
+  .course-item {
+    margin-bottom: 15px;
+  }
 
-    .job p,
-    .project p,
-    .education-item p,
-    .course-item p {
-      font-size: 14px;
-      color: #666;
-      margin: 5px 0;
-    }
+  .job h3,
+  .project h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #0066cc;
+  }
 
-    .skills-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      list-style: none;
-      padding: 0;
-    }
+  .job p,
+  .project p,
+  .education-item p,
+  .course-item p {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+  }
 
-    .skills-list li {
-      background: #e6f7ff;
-      padding: 5px 10px;
-      border-radius: 3px;
-      color: #0066cc;
-      font-size: 14px;
-    }
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+  }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 10px;
-    }
+  .skills-list li {
+    background: #e6f7ff;
+    padding: 5px 10px;
+    border-radius: 3px;
+    color: #0066cc;
+    font-size: 14px;
+  }
 
-    table th,
-    table td {
-      border: 1px solid #ccc;
-      padding: 8px;
-      text-align: left;
-      font-size: 14px;
-    }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
 
-    table th {
-      background-color: #f4f4f9;
-    }
-  </style>
-  <body>
-    <div id="resume" class="resume-container">
-      <header class="header">
-        <h1>Pawan, Backend Developer</h1>
-        <p>Noida, Uttar Pradesh, India | +91 7206384197 | pawan.punnu.k@gmail.com</p>
-        <div class="links">
-          <a href="https://www.linkedin.com/in/pawan1305/" target="_blank"
-            >LinkedIn</a
-          >
-          |
-          <a href="https://pawan1305.github.io/My-Portfolio/" target="_blank"
-            >Portfolio</a
-          >
-          |
-          <a href="https://www.hackerearth.com/@pawan.kumar.13" target="_blank"
-            >HackerEarth</a
-          >
-          |
-          <a href="https://github.com/pawan1305" target="_blank">GitHub</a>
-        </div>
-      </header>
+  table th,
+  table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+    font-size: 14px;
+  }
 
-      <section class="profile">
-        <h2>Profile</h2>
-        <p>
-          Dynamic Backend Developer with over a year of experience and a strong
-          foundation in full-stack technologies, currently driving innovation at
-          EC-Council. Proficient in NodeJS and Express.js, alongside expertise
-          in MongoDB and MySQL, enabling the development of robust applications.
-          Demonstrated ability to apply problem-solving skills and a keen
-          understanding of RESTful APIs in real-world projects. Committed to
-          continuous learning and development, aiming to excel as a Node.js
-          Developer and contribute to impactful software solutions.
+  table th {
+    background-color: #f4f4f9;
+  }
+</style>
+
+<body>
+  <div id="resume" class="resume-container">
+    <header class="header">
+      <h1>Pawan, Backend Developer</h1>
+      <p>Noida, Uttar Pradesh, India | +91 7206384197 | pawan.punnu.k@gmail.com</p>
+      <div class="links">
+        <a href="https://www.linkedin.com/in/pawan1305/" target="_blank">LinkedIn</a>
+        |
+        <a href="https://pawan1305.github.io/My-Portfolio/" target="_blank">Portfolio</a>
+        |
+        <a href="https://www.hackerearth.com/@pawan.kumar.13" target="_blank">HackerEarth</a>
+        |
+        <a href="https://github.com/pawan1305" target="_blank">GitHub</a>
+      </div>
+    </header>
+
+    <section class="profile">
+      <h2>Profile</h2>
+      <p>
+        Dynamic Backend Developer with over a year of experience and a strong
+        foundation in full-stack technologies, currently driving innovation at
+        EC-Council. Proficient in NodeJS and Express.js, alongside expertise
+        in MongoDB and MySQL, enabling the development of robust applications.
+        Demonstrated ability to apply problem-solving skills and a keen
+        understanding of RESTful APIs in real-world projects. Committed to
+        continuous learning and development, aiming to excel as a Node.js
+        Developer and contribute to impactful software solutions.
+      </p>
+    </section>
+
+    <section class="experience">
+      <h2>Experience</h2>
+      <div class="job">
+        <h3>Backend Developer, EC-Council</h3>
+        <p><strong>Jul 2024 – Present</strong></p>
+        <p style="color: #333">
+          <strong>
+            Working as a Backend Developer at EC-Council, focusing on building and maintaining server-side applications
+            using NodeJS, Express.js, MongoDB, and MySQL. Collaborating with cross-functional teams to develop scalable
+            RESTful APIs and deliver cybersecurity solutions for enterprise clients.
+          </strong>
         </p>
-      </section>
-
-      <section class="experience">
-        <h2>Experience</h2>
-        <div class="job">
-          <h3>Backend Developer, EC-Council</h3>
-          <p><strong>Jul 2024 – Present</strong></p>
-          <p style="color: #333">
-            <strong
-              >Currently serving as a Backend Developer at EC-Council, focusing
-              on creating and managing server-side applications. The role
-              involves utilizing various technologies such as NodeJS and
-              Express.js to build robust RESTful APIs that support web
-              applications. Engaging closely with cross-functional teams ensures
-              that all requirements are met and integrated effectively into the
-              systems.
-            </strong>
-          </p>
-          <ul>
-            <li>
-              Developing and maintaining backend applications using NodeJS and
-              Express.js.
-            </li>
-            <li>
-              Designing RESTful APIs that efficiently communicate with frontend
-              interfaces.
-            </li>
-            <li>
-              Collaborating with frontend developers to ensure seamless
-              integration of user-facing elements.
-            </li>
-            <li>
-              Implementing database solutions with MongoDB and MySQL for data
-              storage and management.
-            </li>
-          </ul>
-        </div>
-        <div class="job">
-          <h3>Teaching Assistant, Coding Ninjas</h3>
-          <p><strong>Aug 2024 – Nov 2024</strong></p>
-          <p style="color: #333">
-            <strong
-              >As a Teaching Assistant at Coding Ninjas, I facilitated learning
-              and skill development in Node.js for a diverse group of students.
-              I provided academic and technical support, ensuring a seamless
-              learning experience by addressing students' challenges, debugging
-              code, and clarifying complex concepts.
-            </strong>
-          </p>
-          <ul>
-            <li>
-              Assisted and mentored students in mastering Node.js concepts,
-              including asynchronous programming, APIs, Express.js, and MongoDB.
-            </li>
-            <li>
-              Debugged and resolved coding issues for students, improving their
-              problem-solving and debugging skills.
-            </li>
-            <li>
-              Conducted one-on-one sessions to explain complex topics, ensuring
-              individual learning needs were met.
-            </li>
-            <li>
-              Reviewed students’ assignments, projects, and code submissions,
-              providing constructive feedback to enhance code quality and
-              adherence to best practices.
-            </li>
-            <li>
-              Guided students in building hands-on projects using Node.js,
-              showcasing practical implementation of learned concepts.
-            </li>
-          </ul>
-        </div>
-        <div class="job">
-          <h3>Frontend Intern, OmnistTechHub Solutions Pvt. Ltd.</h3>
-          <p><strong>Feb 2023 – Apr 2023</strong></p>
-          <p style="color: #333">
-            <strong
-              >During the internship at OmnistTechHub Solutions Pvt. Ltd.,
-              significant exposure was gained in frontend development. Engaging
-              in various projects allowed for the application of skills in HTML,
-              CSS, and JavaScript to create responsive web applications.
-              Collaboration with experienced developers provided insights into
-              best practices and modern development techniques.
-            </strong>
-          </p>
-          <ul>
-            <li>
-              Assisted in the development of user interfaces for web
-              applications using HTML5, CSS, and JavaScript.
-            </li>
-            <li>
-              Participated in team meetings to discuss project progress and
-              gather feedback.
-            </li>
-            <li>
-              Learned to implement responsive design principles to enhance user
-              experience across devices.
-            </li>
-            <li>
-              Gained practical experience with version control systems like Git.
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="projects">
-        <h2>Projects</h2>
-        <div class="project">
-          <h3>Busy Buy</h3>
-          <p>
-            <a
-              href="https://tangerine-gingersnap-3c8b63.netlify.app/"
-              target="_blank"
-              >Project Link</a
-            >
-          </p>
-          <p>
-            I created BusyBuy, a personal shopping application built using the
-            MERN Stack. The application features a clean and straightforward
-            design, including cards, SignIn, Signup feature, and filters. It maintains its own unique and minimal
-            style, optimized for various screen sizes to ensure a smooth user
-            experience.
-          </p>
-        </div>
-        <div class="project">
-          <h3>Prime Video Clone (Static)</h3>
-          <p>
-            <a
-              href="https://pawan1305.github.io/Prime-Video-Clone/"
-              target="_blank"
-              >Project Link</a
-            >
-          </p>
-          <p>
-            I created a static Prime Video clone using HTML, CSS, JavaScript,
-            and Bootstrap. The design replicates the layout and styling of the
-            original platform, featuring a responsive navbar, hero sections, and
-            neatly organized carousels for displaying content. It provides a
-            visually accurate representation of Prime Video&#39;s interface,
-            optimized for various screen sizes.
-          </p>
-        </div>
-        <div class="project">
-          <h3>Photography Website Design (Static)</h3>
-          <p>
-            <a href="https://pawan1305.github.io/PSD-Design/" target="_blank"
-              >Project Link</a
-            >
-          </p>
-          <p>
-            I created a modern and responsive website design for photography
-            using HTML, CSS, and Bootstrap. The design incorporates smooth
-            animations to enhance user engagement, creating a visually appealing
-            experience. It features a clean layout, optimized for showcasing
-            high-quality images, and includes interactive elements like a
-            responsive navbar, image galleries, and hover effects, all tailored
-            for an immersive user experience.
-          </p>
-        </div>
-        <div class="project">
-          <h3>Weather Website</h3>
-          <p>
-            <a href="https://pawan1305.github.io/Weather/" target="_blank"
-              >Project Link</a
-            >
-          </p>
-          <p>
-            I developed a dynamic weather website using HTML, CSS, and
-            JavaScript, leveraging APIs with Axios for real-time data fetching.
-            The website features an intuitive interface where users can search
-            for current weather conditions by city. It displays temperature,
-            humidity, wind speed, and more, with visually appealing designs and
-            responsive layouts to ensure a seamless experience across devices.
-          </p>
-        </div>
-        <div class="project">
-          <h3>Snake Game</h3>
-          <p>
-            <a href="https://pawan1305.github.io/Snake_Game/" target="_blank"
-              >Project Link</a
-            >
-          </p>
-          <p>
-            I built a classic Snake game using simple HTML, CSS, and JavaScript.
-            The game features smooth gameplay with keyboard controls, real-time
-            score tracking, and an interactive grid-based design. It provides a
-            fun and nostalgic experience, complete with responsive functionality
-            for desktop and mobile browsers.
-          </p>
-        </div>
-      </section>
-
-      <section class="skills">
-        <h2>Skills</h2>
-        <ul class="skills-list">
-          <li>Backend Development</li>
-          <li>RESTful APIs</li>
-          <li>NodeJS Development</li>
-          <li>Express.js Framework</li>
-          <li>Database Management</li>
-          <li>MongoDB Expertise</li>
-          <li>MySQL Proficiency</li>
-          <li>Problem Solving</li>
-          <li>C/C++ Language</li>
-          <li>ReactJS</li>
-          <li>Bootstrap</li>
-          <li>HTML + Tailwind CSS</li>
-          <li>Data Structures and Algorithms</li>
+        <ul>
+          <li>Developing robust backend services and APIs for cybersecurity products.</li>
+          <li>Collaborating with frontend teams for seamless integration of user-facing components.</li>
+          <li>Ensuring optimized database operations and scalable system design.</li>
+          <li>Actively involved in major simulation platforms and client deployments.</li>
         </ul>
-      </section>
+      </div>
 
-      <section class="education">
-        <h2>Education</h2>
-        <div class="education-item">
-          <p><strong>Jun 2021 – Jun 2024</strong></p>
-          <p>
-            Bachelor of Science in Computer Science, Government Post Graduate
-            College, Hisar
-          </p>
-          <p><b>Grade : A+</b></p>
-        </div>
-        <div class="education-item">
-          <p><strong>Mar 2020 – Mar 2021</strong></p>
-          <p>Senior-Secondary, Holy Child Sr. Sec. School, Hisar</p>
-          <p><b> Score : 97%</b></p>
-        </div>
-        <div class="education-item">
-          <p><strong>Mar 2018 – Mar 2019</strong></p>
-          <p>Secondary, Holy Child Sr. Sec. School, Hisar</p>
-          <p><b>Score : 92%</b></p>
-        </div>
-      </section>
+      <div class="job">
+        <h3>Backend Developer, BrandSek IT Solutions</h3>
+        <p><strong>Aug 2023 – June 2024</strong></p>
+        <p style="color: #333">
+          <strong>
+            Worked as a Backend Developer at BrandSek IT Solutions, contributing to the development of AI-driven
+            cybersecurity platforms.
+            BrandSek’s AI engine emulates hackers by continuously scanning clients’ attack surfaces, Brand reputation,
+            and data exposure across
+            the Surface and Dark Web. My role focused on building scalable backend architectures and RESTful APIs using
+            NodeJS, Express.js, MongoDB,
+            and MySQL to support automated threat detection and simulation systems.
+          </strong>
+        </p>
+        <ul>
+          <li>Developed robust backend services and APIs to automate cybersecurity assessments for enterprise clients.
+          </li>
+          <li>Engineered scalable data pipelines to manage continuous scans of public and dark web sources for threat
+            intelligence.</li>
+          <li>Collaborated closely with frontend and AI teams to integrate machine learning models for real-time
+            vulnerability detection.</li>
+          <li>Optimized database queries and schema designs to ensure efficient data retrieval and storage in
+            large-scale environments.</li>
+          <li>Led the backend development for simulation platforms, enabling realistic phishing and attack simulations
+            for clients.</li>
+          <li>Worked on-premise client deployments, handling end-to-end setup, system configuration, and support for
+            secure environments.</li>
+        </ul>
+      </div>
 
-      <section class="courses">
-        <h2>Certifications</h2>
-        <div class="course-item">
-          <!-- <p><strong>Aug 2022 – Aug 2023</strong></p> -->
-          <p>Front End | Full Stack Web Development | Coding Ninjas</p>
-          <a href="https://certificate.codingninjas.com/view/2164d566210e00ff"
-            >Certificate</a
-          >
-        </div>
-        <div class="course-item">
-          <!-- <p><strong>Aug 2022 – Aug 2023</strong></p> -->
-          <p>
-            Back End | Full Stack Web Development in Node.js | Coding Ninjas
-          </p>
-          <a href="https://certificate.codingninjas.com/view/4e55896904a80c6f"
-            >Certificate</a
-          >
-        </div>
-        <div class="course-item">
-          <!-- <p><strong>Aug 2022 – Aug 2023</strong></p> -->
-          <p>
-            Advance Front-End Web Development with React - Full Stack | Coding
-            Ninjas
-          </p>
-          <a href="https://certificate.codingninjas.com/view/0ce615f011b464df"
-            >Certificate</a
-          >
-        </div>
-      </section>
+      <div class="job">
+        <h3>Teaching Assistant, Coding Ninjas</h3>
+        <p><strong>Aug 2024 – Nov 2024</strong></p>
+        <p style="color: #333">
+          <strong>As a Teaching Assistant at Coding Ninjas, I facilitated learning
+            and skill development in Node.js for a diverse group of students.
+            I provided academic and technical support, ensuring a seamless
+            learning experience by addressing students' challenges, debugging
+            code, and clarifying complex concepts.
+          </strong>
+        </p>
+        <ul>
+          <li>
+            Assisted and mentored students in mastering Node.js concepts,
+            including asynchronous programming, APIs, Express.js, and MongoDB.
+          </li>
+          <li>
+            Debugged and resolved coding issues for students, improving their
+            problem-solving and debugging skills.
+          </li>
+          <li>
+            Conducted one-on-one sessions to explain complex topics, ensuring
+            individual learning needs were met.
+          </li>
+          <li>
+            Reviewed students’ assignments, projects, and code submissions,
+            providing constructive feedback to enhance code quality and
+            adherence to best practices.
+          </li>
+          <li>
+            Guided students in building hands-on projects using Node.js,
+            showcasing practical implementation of learned concepts.
+          </li>
+        </ul>
+      </div>
 
-      <section class="languages">
-        <h2>Languages</h2>
-        <table>
-          <tr>
-            <th>Hindi</th>
-            <td>Native speaker</td>
-          </tr>
-          <tr>
-            <th>English</th>
-            <td>Very good command</td>
-          </tr>
-        </table>
-      </section>
-    </div>
-  </body>
+      <div class="job">
+        <h3>Frontend Intern, OmnistTechHub Solutions Pvt. Ltd.</h3>
+        <p><strong>Feb 2023 – Apr 2023</strong></p>
+        <p style="color: #333">
+          <strong>During the internship at OmnistTechHub Solutions Pvt. Ltd.,
+            significant exposure was gained in frontend development. Engaging
+            in various projects allowed for the application of skills in HTML,
+            CSS, and JavaScript to create responsive web applications.
+            Collaboration with experienced developers provided insights into
+            best practices and modern development techniques.
+          </strong>
+        </p>
+        <ul>
+          <li>
+            Assisted in the development of user interfaces for web
+            applications using HTML5, CSS, and JavaScript.
+          </li>
+          <li>
+            Participated in team meetings to discuss project progress and
+            gather feedback.
+          </li>
+          <li>
+            Learned to implement responsive design principles to enhance user
+            experience across devices.
+          </li>
+          <li>
+            Gained practical experience with version control systems like Git.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="projects">
+      <h2>Projects</h2>
+      <div class="project">
+        <h3>Phishing Simulation and Cyber Awareness Platform</h3>
+        <p>
+          <a href="https://ciso.eccouncil.org/phishing-solutions/" target="_blank">Project Link</a>
+        </p>
+        <p>
+          A large-scale Phishing Simulation and Cybersecurity Awareness Platform designed to educate enterprise users on
+          phishing attacks, USB baiting, ransomware, and other social engineering threats. The platform is capable of
+          handling simulation campaigns for 1 lakh+ concurrent users, providing real-time tracking and detailed
+          analytics.
+        </p>
+        <ul>
+          <li>Developed and optimized RESTful APIs to manage high-volume simulation campaigns with over 1 lakh+ users
+            simultaneously.</li>
+          <li>Built dynamic workflows for phishing emails, landing pages, and behavior tracking modules.</li>
+          <li>Integrated simulation scenarios for USB baiting and ransomware awareness campaigns.</li>
+          <li>Led the on-premise deployment process for enterprise clients, ensuring seamless integration with their IT
+            infrastructure and strict adherence to data privacy standards.</li>
+          <li>Collaborated with security experts to enhance simulation techniques and reporting mechanisms for better
+            organizational impact.</li>
+          <li>Worked on backend optimization using MongoDB and MySQL for handling large-scale activity data.</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <h3>AI-Powered Attack Surface Monitoring Platform</h3>
+        <p>
+          <a href="https://brandsek.com/" target="_blank">Project Link</a>
+        </p>
+        <p>
+          At BrandSek IT Solutions, I contributed to developing an AI-powered cybersecurity platform that emulates
+          hacker tactics to identify vulnerabilities in clients’ attack surfaces, brand reputation, and data exposure on
+          both Surface and Dark Web. The platform performs continuous automated scans and provides real-time threat
+          intelligence dashboards to enterprise clients.
+        </p>
+        <ul>
+          <li>Designed and implemented scalable RESTful APIs using NodeJS and Express.js to support automated threat
+            monitoring systems.</li>
+          <li>Developed backend services for processing large-scale data from public sources, dark web forums, and
+            breach databases.</li>
+          <li>Integrated AI modules for predictive threat analysis and real-time alerts.</li>
+          <li>Collaborated with DevOps team for secure and efficient on-premise deployments tailored for enterprise
+            clients.</li>
+          <li>Optimized MongoDB and MySQL databases for handling high-velocity data streams and improving system
+            performance.</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <h3>Busy Buy</h3>
+        <p>
+          <a href="https://tangerine-gingersnap-3c8b63.netlify.app/" target="_blank">Project Link</a>
+        </p>
+        <p>
+          I created BusyBuy, a personal shopping application built using the
+          MERN Stack. The application features a clean and straightforward
+          design, including cards, SignIn, Signup feature, and filters. It maintains its own unique and minimal
+          style, optimized for various screen sizes to ensure a smooth user
+          experience.
+        </p>
+      </div>
+      <div class="project">
+        <h3>Prime Video Clone (Static)</h3>
+        <p>
+          <a href="https://pawan1305.github.io/Prime-Video-Clone/" target="_blank">Project Link</a>
+        </p>
+        <p>
+          I created a static Prime Video clone using HTML, CSS, JavaScript,
+          and Bootstrap. The design replicates the layout and styling of the
+          original platform, featuring a responsive navbar, hero sections, and
+          neatly organized carousels for displaying content. It provides a
+          visually accurate representation of Prime Video&#39;s interface,
+          optimized for various screen sizes.
+        </p>
+      </div>
+      <div class="project">
+        <h3>Photography Website Design (Static)</h3>
+        <p>
+          <a href="https://pawan1305.github.io/PSD-Design/" target="_blank">Project Link</a>
+        </p>
+        <p>
+          I created a modern and responsive website design for photography
+          using HTML, CSS, and Bootstrap. The design incorporates smooth
+          animations to enhance user engagement, creating a visually appealing
+          experience. It features a clean layout, optimized for showcasing
+          high-quality images, and includes interactive elements like a
+          responsive navbar, image galleries, and hover effects, all tailored
+          for an immersive user experience.
+        </p>
+      </div>
+      <div class="project">
+        <h3>Weather Website</h3>
+        <p>
+          <a href="https://pawan1305.github.io/Weather/" target="_blank">Project Link</a>
+        </p>
+        <p>
+          I developed a dynamic weather website using HTML, CSS, and
+          JavaScript, leveraging APIs with Axios for real-time data fetching.
+          The website features an intuitive interface where users can search
+          for current weather conditions by city. It displays temperature,
+          humidity, wind speed, and more, with visually appealing designs and
+          responsive layouts to ensure a seamless experience across devices.
+        </p>
+      </div>
+      <div class="project">
+        <h3>Snake Game</h3>
+        <p>
+          <a href="https://pawan1305.github.io/Snake_Game/" target="_blank">Project Link</a>
+        </p>
+        <p>
+          I built a classic Snake game using simple HTML, CSS, and JavaScript.
+          The game features smooth gameplay with keyboard controls, real-time
+          score tracking, and an interactive grid-based design. It provides a
+          fun and nostalgic experience, complete with responsive functionality
+          for desktop and mobile browsers.
+        </p>
+      </div>
+    </section>
+
+    <section class="skills">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li>Backend Development</li>
+        <li>RESTful APIs</li>
+        <li>NodeJS Development</li>
+        <li>Express.js Framework</li>
+        <li>Database Management</li>
+        <li>MongoDB Expertise</li>
+        <li>MySQL Proficiency</li>
+        <li>Problem Solving</li>
+        <li>C/C++ Language</li>
+        <li>ReactJS</li>
+        <li>Bootstrap</li>
+        <li>HTML + Tailwind CSS</li>
+        <li>Data Structures and Algorithms</li>
+      </ul>
+    </section>
+
+    <section class="education">
+      <h2>Education</h2>
+      <div class="education-item">
+        <p><strong>Jun 2021 – Jun 2024</strong></p>
+        <p>
+          Bachelor of Science in Computer Science, Government Post Graduate
+          College, Hisar
+        </p>
+        <p><b>Grade : A+</b></p>
+      </div>
+      <div class="education-item">
+        <p><strong>Mar 2020 – Mar 2021</strong></p>
+        <p>Senior-Secondary, Holy Child Sr. Sec. School, Hisar</p>
+        <p><b> Score : 97%</b></p>
+      </div>
+      <div class="education-item">
+        <p><strong>Mar 2018 – Mar 2019</strong></p>
+        <p>Secondary, Holy Child Sr. Sec. School, Hisar</p>
+        <p><b>Score : 92%</b></p>
+      </div>
+    </section>
+
+    <section class="courses">
+      <h2>Certifications</h2>
+      <div class="course-item">
+        <!-- <p><strong>Aug 2022 – Aug 2023</strong></p> -->
+        <p>Front End | Full Stack Web Development | Coding Ninjas</p>
+        <a href="https://certificate.codingninjas.com/view/2164d566210e00ff">Certificate</a>
+      </div>
+      <div class="course-item">
+        <!-- <p><strong>Aug 2022 – Aug 2023</strong></p> -->
+        <p>
+          Back End | Full Stack Web Development in Node.js | Coding Ninjas
+        </p>
+        <a href="https://certificate.codingninjas.com/view/4e55896904a80c6f">Certificate</a>
+      </div>
+      <div class="course-item">
+        <!-- <p><strong>Aug 2022 – Aug 2023</strong></p> -->
+        <p>
+          Advance Front-End Web Development with React - Full Stack | Coding
+          Ninjas
+        </p>
+        <a href="https://certificate.codingninjas.com/view/0ce615f011b464df">Certificate</a>
+      </div>
+    </section>
+
+    <section class="languages">
+      <h2>Languages</h2>
+      <table>
+        <tr>
+          <th>Hindi</th>
+          <td>Native speaker</td>
+        </tr>
+        <tr>
+          <th>English</th>
+          <td>Very good command</td>
+        </tr>
+      </table>
+    </section>
+  </div>
+</body>
+
 </html>
